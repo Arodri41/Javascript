@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Simulador de interes</title>
+</head>
+<body>
+    <form name="formulario1">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="capital_depositado">Ingresa el valor de capital depositado:</label>
+                    </td>
+                    <td>
+                        <input name="capital_depositado" required="required" step="0.000001" type="number" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="tasa_de_interes">porcentaje de interes:</label>
+                    </td>
+                    <td>
+                        <input name="tasa_de_interes" required="required" step="" type="number" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="tiempo">cantidad de meses:</label>
+                    </td>
+                    <td>
+                        <input name="tiempo" required="required" step="" type="number" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" rowspan="1">
+                        <input value="Procesar" type="button" onclick="algoritmo();" />
+                        <input type="reset" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="interes_compuesto">Valor de interes compuesto:</label>
+                    </td>
+                    <td>
+                        <input name="interes_compuesto" step="" type="number" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="monto">Valor del monto:</label>
+                    </td>
+                    <td>
+                        <input name="monto"  type="number" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>
