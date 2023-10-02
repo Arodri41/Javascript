@@ -2,63 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="index.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>Simulador de interes</title>
+    <link rel="stylesheet" href="./style.css">
+    <title>Calculadora Interes</title>
 </head>
 <body>
-    <form name="formulario1">
-        <table>
-            <tbody>
-                <tr>
-                    <td>
-                        <label for="capital_depositado">Ingresa el valor de capital depositado:</label>
-                    </td>
-                    <td>
-                        <input name="capital_depositado" required="required" step="0.000001" type="number" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="tasa_de_interes">porcentaje de interes:</label>
-                    </td>
-                    <td>
-                        <input name="tasa_de_interes" required="required" step="" type="number" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="tiempo">cantidad de meses:</label>
-                    </td>
-                    <td>
-                        <input name="tiempo" required="required" step="" type="number" />
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" rowspan="1">
-                        <input value="Procesar" type="button" onclick="algoritmo();" />
-                        <input type="reset" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="interes_compuesto">Valor de interes compuesto:</label>
-                    </td>
-                    <td>
-                        <input name="interes_compuesto" step="" type="number" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="monto">Valor del monto:</label>
-                    </td>
-                    <td>
-                        <input name="monto"  type="number" />
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </form>
+  <div class="container">
+      <a href="home.html"><h1>Calculadora de Interes Compuesto</h1></a>
+      <div class="container-calc">
+
+          <div class="calc-monto">
+              <label for="monto">Inversion Inicial</label>
+              <div class="calc-monto-flex">
+                  <span class="calc-monto-symbol">$</span>
+                  <input type="number" name="monto" id="monto" placeholder="0">
+                  <span class="monto-reset">&#x2715</span>
+              </div>
+          </div>
+
+          <div class="calc-tasa">
+              <label for="tasa">Tasa de Interes</label>
+              <div class="calc-tasa-flex">
+                  <input type="number" name="tasa" id="tasa" placeholder="0">
+                  <span class="calc-tasa-symbol">%</span>
+                  <select name="tasaTiempo" id="tasaTiempo"></select>
+              </div>
+          </div>
+
+          <div class="calc-interes">
+              <label for="interes">Capitalizacion</label>
+              <select name="interes" id="interes"></select>
+          </div>
+
+          <div class="calc-periodo">
+              <label for="periodo">Plazo</label>
+              <div class="calc-periodo-flex">
+                  <input type="number" name="periodo" id="periodo" placeholder="0">
+                  <select name="periodoTiempo" id="periodoTiempo"></select>
+              </div>
+          </div>
+
+          <div class="calc-buttons">
+              <button id="buttonCalc">&#128425 Calcular</button>
+              <button id="buttonReset">&#x2715 Reiniciar</button>
+          </div>
+
+          <div class="calc-resultado">
+              <label for="resultado">Valor Futuro</label>
+              <div class="calc-resultado-flex">
+                  <span class="calc-resultado-symbol">$</span>
+                  <input type="text" name="resultado" id="resultado" readonly="true" placeholder="0">
+              </div>
+          </div>
+
+      </div>
+  </div>
+  <script src="./script.js"></script>
 </body>
 </html>
