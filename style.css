@@ -3,7 +3,7 @@
   --negro: #000000;
   --rosado: #C7C7C7;
   --textinput: #F7F7F7;
-  --verde: #ACD9B2;
+  --azul: #3F6CF9;
   --gris: #D7E9DA;
   --click: #979797;
   --sm: 14px;
@@ -11,11 +11,11 @@
   --lg: 18px;
   }
   *{
-    background-color: var(--verde);
-
+    background-color: var(--azul);
+    color: var(--negro);
   }
   nav {
-    background-color: rgb(32, 56, 28);
+    background-color: var(--azul);
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -56,7 +56,7 @@
     font-size: larger;
   }
   .container-calc {
-    background: var(--verde);
+    background: var(--azul);
     margin: auto;;
     width: 100%;
     padding: 40px;
@@ -303,7 +303,7 @@
     border-radius: 0 6px 6px 0;
   }
   footer{
-    background-color: $mainColor;
+    background-color:var(--azul);
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
