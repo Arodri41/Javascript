@@ -50,17 +50,17 @@ for (let i = 0; i < periodoTiempo.length+1; i++) {
 // calculador interes submit
 
 
-resetButton.addEventListener("click", reset);
+
 
 if (capitalReset) {
   capitalReset.addEventListener("click",()=>inputCapital.value = "");
-  };
+  }
 if(calcButton){
   calcButton.addEventListener("click", CalcularPagoTotal);
 }
+resetButton.addEventListener("click", reset);
 
 function CalcularPagoTotal(){
-
   const valorInicial = inputCapital.value;
   const tasaInteres = tasaInput.value;
   const plazo = periodoInput.value;
@@ -68,7 +68,7 @@ function CalcularPagoTotal(){
   if (tasaSelect.selectedIndex == 0 || 
     interesSelect.selectedIndex == 0 || 
     periodoSelect.selectedIndex == 0) {
-        alert("Seleccione alguno \n de los periodos.");
+        alert("Seleccione los periodos.");
     } 
 
 else{
@@ -79,13 +79,13 @@ else{
   const tasaCapital = (tasaInteres/proporcionTasa) * proporcionInteres;
   const plazosCapital = (plazo*proporcionPeriodo) / proporcionInteres;
 
-  let resultado = valorInicial * 
+  let resultado1 = valorInicial * 
   Math.pow((1+(tasaCapital/100)),plazosCapital);
 
  
 
-resultado.value = resultado.toLocaleString('en-US');
-console.log(resultado);
+  resultado.value = resultado1.toLocaleString('en-US');
+console.log(resultado1);
 }
 }
 
